@@ -1,0 +1,45 @@
+@import "Componets";
+
+@font-face {font-family: "IRAN Sans"; src: url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.eot"); src: url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.woff") format("woff"), url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/766132c828a90cbecf6f7f4027d12725.svg#IRAN Sans") format("svg"); }
+
+* {
+    direction: rtl;
+    font-family: 'IRAN Sans', sans-serif !important;
+}
+
+.vertical-line {
+    @include verticalLine();
+}
+
+.pointer {
+    @include pointer;
+}
+
+input {
+    &::placeholder {
+        color: rgba(black,.2);
+    }
+}
+
+.input-parent {
+    position: relative;
+
+    .clear, .search {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -9px);
+    }
+
+    .search {
+        right: 10px;
+        transform: translate(0, -10px);
+    }
+
+    .input {
+        @include input;
+        width: 100%;
+        display: block;
+    }
+}
+

@@ -1,0 +1,127 @@
+@import "Componets";
+
+.navbar {
+    .nav-logo {
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    .navbar-nav {
+        .city {
+            &-open {
+                font-size: .875rem;
+                line-height: 2;
+                min-width: unset;
+                color: rgba(0,0,0,.44);
+            }
+        }
+    }
+
+    .nav-item-btn {
+        @extend .city-open;
+    }
+
+    .input-parent {
+        .search-input {
+            width: 100%;
+            height: 40px;
+            padding-right: 40px;
+            padding-left: 40px;
+            font-size: .8rem;
+            background-color: rgba(0,0,0,.04);
+            border-radius: 4px;
+            border: none;
+            outline: none;
+
+            &:focus {
+                background-color: #fff;
+                box-shadow: 0 -8px 32px -4px #0000000A, 0 16px 24px -6px #0000000A, 0 1px 6px 0 #00000014;
+                border-radius: 4px 4px 0 0;
+                border-bottom: 1px solid rgba(0,0,0,.12);
+            }
+        }
+
+        .most-searched-box {
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+            background-color: #fff;
+            transition: .5s;
+            position: absolute;
+            top: 100%;
+            border-radius: 0 0 4px 4px;
+            padding: 1rem;
+            color: rgba(0,0,0,.56);
+
+            .title {
+                margin-bottom: 1rem;
+            }
+
+            .chip {
+                margin-left: .5rem;
+                margin-bottom: .5rem;
+            }
+        }
+
+        .show-box {
+            opacity: 100%;
+            visibility: visible;
+        }
+    }
+}
+
+
+.modal-box {
+    @include modalStyle;
+
+    .city-modal-header {
+        padding: 32px 32px 16px;
+        box-shadow: 0 1px 2px 0 #0000001E;
+    }
+
+    .city-modal-content {
+        padding-left: 3px;
+        .cities {
+            @include scrollBars(4px, #d5d5d5, white);
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 8px 32px 0;
+            margin-bottom: 8px;
+
+
+            .city-title {
+                color: $main-dark;
+                line-height: 2;
+                margin: 0;
+                font-size: 1rem;
+            }
+
+            svg {
+                font-size: 24px;
+                color: rgba(0,0,0,.32);
+            }
+        }
+    }
+
+    .city-modal-bottom {
+        padding: 16px;
+        box-shadow: 0 -1px 2px 0 #0000001E;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(0,0,0,.48);
+
+        div , div button {
+            font-size: .875rem;
+            font-weight: 500;
+            height: 2.5rem;
+        }
+
+        div {
+            width: 48%;
+        }
+
+        div button {
+            width: 100%;
+        }
+    }
+}

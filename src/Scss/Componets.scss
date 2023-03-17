@@ -1,0 +1,71 @@
+$main-dark : rgba(0,0,0,.87);
+
+
+@mixin verticalLine ($height: 1.5rem) {
+    height: $height;
+    width: 1px;
+    background-color: rgba(black, .12);
+    margin: 0 .5rem;
+}
+
+@mixin pointer () {
+    cursor: pointer;
+}
+
+@mixin input ($height: 2.5rem) {
+    border: 1px solid rgba(0,0,0,.24);
+    border-radius: 4px;
+    outline: 0;
+    color: $main-dark;
+    font-size: 1rem;
+    height: $height;
+    line-height: $height;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: .3s;
+
+    &:hover {
+        border-color: rgba(0,0,0,.48);
+    }
+
+    &:focus {
+        border-color: #A626268E;
+        box-shadow: 0 0 0 1px #A626268E;
+    }
+}
+
+@mixin modalStyle () {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 488px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 11px 15px -7px #00000033, 0px 24px 38px 3px #00000023, 0px 9px 46px 8px #0000001E;
+}
+
+
+@mixin scrollBars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+        border-radius: 16px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+        border-radius: 16px;
+    }
+}
