@@ -1,0 +1,55 @@
+@import 'Componets';
+
+.post {
+    border: 1px solid rgba(black,.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    height: 168px;
+    display: flex;
+
+
+    &-body {
+        min-width: 0;
+
+        .post-title {
+            color: $main-dark;
+            font-size: 1rem;
+            font-weight: 500;
+            height: 56px;
+            line-height: 28px;
+            margin-bottom: auto;
+            margin-top: 0;
+            @include text-cut;
+            white-space: normal;
+        }
+
+        .post-status, .post-price {
+            color: rgba(0,0,0,.56);
+            font-size: .875rem;
+            line-height: 24px;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            text-overflow: ellipsis;
+            white-space: pre;
+        }
+
+        .post-bottom {
+            line-height: 24px;
+            overflow-wrap: break-word;
+            white-space: nowrap;
+            font-size: .75rem;
+            display: flex;
+
+            .post-description {
+                @include text-cut;
+                color: rgba(black,.56);
+            }
+        }
+    }
+
+    &-img {
+        border-radius: 4px;
+        margin-right: 2px;
+    }
+}

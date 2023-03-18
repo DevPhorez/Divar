@@ -18,7 +18,7 @@ function Navbar () {
 
     return (
         <>
-        <nav className="navbar navbar-expand-lg bg-white border-bottom p-0" style={ { height: 64, zIndex: 1000 } }>
+        <nav className="navbar navbar-expand-lg bg-white border-bottom p-0 fixed-top" style={ { height: 64, zIndex: 1000 } }>
             <div className="container-fluid px-3">
                 <a className="navbar-brand me-0" href="#">
                     <img className='nav-logo' src="/Images/logo.svg" alt="صفحه اصلی دیوار" width={48} height={48} />

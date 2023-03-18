@@ -1,3 +1,4 @@
+$primary : #A62626;
 $main-dark : rgba(0,0,0,.87);
 
 
@@ -68,4 +69,11 @@ $main-dark : rgba(0,0,0,.87);
         scrollbar-track-color: $background-color;
         border-radius: 16px;
     }
+}
+
+
+@mixin text-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

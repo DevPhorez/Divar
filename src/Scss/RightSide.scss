@@ -1,0 +1,102 @@
+@import "Componets";
+
+.right-side {
+    @include scrollBars(4px, #d5d5d5, white);
+    overflow-y: auto;
+    position: fixed;
+    top: 68px;
+    width: 300px;
+
+    .categories {
+        &-title {
+            font-size: .75rem;
+            font-weight: 400;
+            line-height: 2;
+            color: $main-dark;
+            margin: 0;
+            padding: 8px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                @include pointer;
+                color: rgba(0,0,0,.5);
+                line-height: 2;
+                outline: none;
+                padding: 6px 0;
+                font-size: .875rem;
+                transition: .36s ease;
+
+                &:hover {
+                    color: $main-dark;
+                }
+            }
+        }
+    }
+
+    .filter-field {
+        @include pointer;
+        border-top: 1px solid rgba(0,0,0,.12);
+        box-sizing: content-box;
+        display: flex;
+        align-items: center;
+        font-size: .75rem;
+        height: 40px;
+        outline: none;
+        padding: 8px 0;
+    }
+
+    footer {
+        border-top: 1px solid rgba(0,0,0,.12);
+        padding: 8px 0;
+
+        .footer-items {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .item {
+                @include pointer;
+                line-height: 2;
+                font-size: .75rem;
+                margin-left: 1rem;
+                color: rgba(black,.4);
+                transition: .3s ease;
+
+                &:hover {
+                    color: $main-dark;
+                }
+            }
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 1rem;
+            color: rgba(black, .5);
+            margin-bottom: 2rem;
+
+            svg {
+                @include pointer;
+                margin: 0 15px;
+                transition: .3s;
+
+                &:hover {
+                    color: $main-dark;
+                }
+            }
+        }
+
+        .enamad {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
