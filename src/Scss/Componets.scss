@@ -67,7 +67,6 @@ $main-dark : rgba(0,0,0,.87);
     & {
         scrollbar-face-color: $foreground-color;
         scrollbar-track-color: $background-color;
-        border-radius: 16px;
     }
 }
 
@@ -76,4 +75,33 @@ $main-dark : rgba(0,0,0,.87);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+%list-title {
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 2;
+    color: $main-dark;
+    margin: 0;
+    padding: 8px 0;
+}
+
+%list {
+    list-style: none;
+    padding: 0;
+}
+
+%list-item {
+    @include pointer;
+    color: rgba(0,0,0,.5);
+    line-height: 2;
+    outline: none;
+    padding: 6px 0;
+    font-size: .875rem;
+    transition: .36s ease;
+
+    &:hover {
+        color: $main-dark;
+    }
 }

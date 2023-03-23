@@ -10,6 +10,7 @@ import Cities from "./City/City";
 import Search from "./Search/Search";
 import { FaRegUser } from "react-icons/fa";
 import { TbMessageCircle2 } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 function Navbar () {
 
@@ -52,7 +53,9 @@ function Navbar () {
                             <Button className='nav-item-btn ms-3' variant="text" color={'inherit'} startIcon={<TbMessageCircle2 size={18} style={ { marginLeft: '.7rem' } } />} >چت</Button>
                         </li>
                         <li className="nav-item">
-                            <Button className='nav-item-btn mx-3' variant="text" color={'inherit'}>پشتیبانی</Button>
+                            <Link to='/support'>
+                                <Button className='nav-item-btn mx-3' variant="text" color={'inherit'}>پشتیبانی</Button>
+                            </Link>
                         </li>
                         <Button color='error' variant="contained">ثبت آگهی</Button>
                     </ul>
