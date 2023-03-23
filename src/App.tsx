@@ -1,12 +1,10 @@
 import React from 'react';
 import Navbar from "./Components/Navbar/Navbar";
-
-import Home from './Page/Home/Home'
-import Support from "./Page/Support/Support";
+import Authenticate from "./Components/Authenticate/Authenticate";
 
 import { useRoutes } from 'react-router-dom'
-import routes from './Routes'
 
+import routes from './Routes'
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -25,13 +23,16 @@ const theme = createTheme({
 
 function App() {
 
+    const [authOpen, setAuthOpen] = React.useState(false)
+
     const router = useRoutes(routes)
 
     return (
         <ThemeProvider theme={theme}>
             <div className="App">
-                <Navbar />
+                <Navbar setOpen={setAuthOpen} />
                 { router }
+                <Authenticate open={authOpen} setOpen={setAuthOpen} />
             </div>
         </ThemeProvider>
     );

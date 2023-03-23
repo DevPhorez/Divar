@@ -12,7 +12,12 @@ import { FaRegUser } from "react-icons/fa";
 import { TbMessageCircle2 } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
-function Navbar () {
+
+interface propsTypes {
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Navbar (props: propsTypes) {
 
     // search input
     const [inputStatus, setInputStatus] = React.useState(false)
@@ -47,7 +52,8 @@ function Navbar () {
                     </ul>
                     <ul className='navbar-nav align-items-center ms-auto'>
                         <li className="nav-item">
-                            <Button className='nav-item-btn' variant="text" color={'inherit'} startIcon={<FaRegUser size={18} style={ { marginLeft: '.7rem' } } />}>دیوار من</Button>
+                            <Button className='nav-item-btn' variant="text" color={'inherit'} startIcon={<FaRegUser size={18} style={ { marginLeft: '.7rem' } } />}
+                            onClick={ () => props.setOpen(true)}>دیوار من</Button>
                         </li>
                         <li className="nav-item">
                             <Button className='nav-item-btn ms-3' variant="text" color={'inherit'} startIcon={<TbMessageCircle2 size={18} style={ { marginLeft: '.7rem' } } />} >چت</Button>

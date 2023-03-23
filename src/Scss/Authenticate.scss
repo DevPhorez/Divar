@@ -1,0 +1,67 @@
+@import "Componets";
+
+
+.login {
+    .modal-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(black, .12);
+        padding: 2rem;
+
+        span {
+            color: $main-dark;
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+    }
+
+    .modal-content {
+        padding: .5rem 2rem 2rem;
+
+
+        .title {
+            color: rgba(0,0,0,.87);
+            font-size: .875rem;
+            margin: 0;
+            font-weight: 600;
+            padding-bottom: .5rem;
+            padding-top: 1rem;
+        }
+
+        .verify-note {
+            color: rgba(0,0,0,.46);
+            font-size: .75rem;
+            font-weight: 600;
+            margin: 0;
+            padding-bottom: 24px;
+            padding-top: 12px;
+        }
+
+        input {
+            padding: 0 .3rem;
+        }
+
+        p {
+            font-size: .8rem;
+            margin: 16px 0 0;
+            color: rgba(0,0,0,.56);
+            white-space: pre-line;
+            font-weight: 400;
+            span {
+
+            }
+        }
+
+        .send-again {
+            font-size: .875rem;
+            padding: 4px 16px;
+            text-align: center;
+            color: rgba(0,0,0,.4);
+            margin: 0;
+            font-weight: 600;
+            line-height: 2;
+        }
+    }
+}

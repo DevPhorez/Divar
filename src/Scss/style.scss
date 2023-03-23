@@ -17,7 +17,7 @@
 
 input {
     &::placeholder {
-        color: rgba(black,.2);
+        color: rgba(black,.3);
     }
 }
 
@@ -57,11 +57,11 @@ input {
 }
 
 a {
-    color: inherit;
+    color: #A62626;
     text-decoration: none;
 
     &:hover {
-        color: inherit;
+        color: #A62626;
     }
 }
 
